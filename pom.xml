@@ -1,0 +1,359 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.star.sud</groupId>
+	<artifactId>Spring-Mvc-Generic-Notification</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Spring-Mvc-Generic-Notification-Module</name>
+	<description>Application for Notification Module</description>
+
+		<properties>
+		<java-version>1.8</java-version>
+		<!-- Sun -->
+		<com.sun.mail-version>1.5.2</com.sun.mail-version>
+
+		<!-- JavaX -->
+		<javax.activation-version>1.1.1</javax.activation-version>
+		<javax.servlet-version>3.0.1</javax.servlet-version>
+		<javax.servlet-jstl>1.2</javax.servlet-jstl>
+		<javax.servlet.jsp-version>2.3.1</javax.servlet.jsp-version>
+		<javax.validation-version>1.1.0.Final</javax.validation-version>
+		<javax.cache-version>1.0.0</javax.cache-version>
+		<javax.javaee-api-version>7.0</javax.javaee-api-version>
+		<javax.json-version>1.0</javax.json-version>
+
+		<!-- Apache Commons -->
+		<commons-configuration-version>1.10</commons-configuration-version>
+		<commons-beanutils-version>1.9.0</commons-beanutils-version>
+		<commons-net-version>3.3</commons-net-version>
+		<commons-collections-version>3.2.1</commons-collections-version>
+		<org.apache.commons-lang-version>3.4</org.apache.commons-lang-version>
+		<org.apache.commons-email-version>1.5</org.apache.commons-email-version>
+		<commons-io-version>2.5</commons-io-version>
+		<commons-fileupload-version>1.2.2</commons-fileupload-version>
+
+		<!-- Apache -->
+		<org.apache.logging.log4j-version>2.1</org.apache.logging.log4j-version>
+
+
+		<!-- Hibernate -->
+		<org.hibernate-version>4.3.8.Final</org.hibernate-version>
+		<org.hibernate-validator>5.1.2.Final</org.hibernate-validator>
+		<org.hibernate-core>4.3.8.Final</org.hibernate-core>
+
+		<!-- Spring Framework -->
+		<org.springframework-version>4.3.3.RELEASE</org.springframework-version>
+		<spring.security-version>3.2.1.RELEASE</spring.security-version>
+
+
+		<!-- 3rd Party Library -->
+		<org.codehaus.jackson-version>1.9.13</org.codehaus.jackson-version>
+		<net.sf.json-lib-version>2.4</net.sf.json-lib-version>
+		<log4j-version>1.2.17</log4j-version>
+		<junit-version>3.8.1</junit-version>
+		<mysql-version>5.1.6</mysql-version>
+		<com.alibaba-version>0.2.23</com.alibaba-version>
+		<com.googlecode.jmapper-framework-version>1.6.1.CR2</com.googlecode.jmapper-framework-version>
+		<org.glassfish.javax.json-version>1.0</org.glassfish.javax.json-version>
+		<com.opencsv-version>4.0</com.opencsv-version>
+		<net.sf.jasperreports-version>6.3.1</net.sf.jasperreports-version>
+		<jasperreports-fonts-version>4.0.0</jasperreports-fonts-version>
+		<org.codehaus.groovy-version>2.4.7</org.codehaus.groovy-version>
+		<org.mapstruct-version>1.1.0.Final</org.mapstruct-version>
+		<com.mchange.c3p0-version>0.9.5.2</com.mchange.c3p0-version>
+		<com.mchange.commons-version>0.2.10</com.mchange.commons-version>
+		<com.fasterxml.jackson.core-version>2.8.9</com.fasterxml.jackson.core-version>
+		<com.jcraft.jsch-version>0.1.54</com.jcraft.jsch-version>
+	</properties>
+
+	<dependencies>
+		<!-- Sun -->
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>${com.sun.mail-version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- JavaX -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${javax.activation-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>${javax.servlet.jsp-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.servlet-jstl}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.cache</groupId>
+			<artifactId>cache-api</artifactId>
+			<version>${javax.cache-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javax.javaee-api-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.mail</groupId>
+					<artifactId>javax.mail</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>javax.json</groupId>
+			<artifactId>javax.json-api</artifactId>
+			<version>${javax.json-version}</version>
+		</dependency>
+
+
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>${commons-configuration-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons-net-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons-collections-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons-lang-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>${org.apache.commons-email-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.mail</groupId>
+					<artifactId>javax.mail</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload-version}</version>
+		</dependency>
+
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${org.hibernate-validator}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate-core}</version>
+		</dependency>
+
+
+		<!-- Spring Framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+
+		<!-- 3rd Party Library -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${org.codehaus.jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>${net.sf.json-lib-version}</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.alibaba</groupId> <artifactId>druid</artifactId> 
+			<version>${com.alibaba-version}</version> </dependency> -->
+		<dependency>
+			<groupId>com.googlecode.jmapper-framework</groupId>
+			<artifactId>jmapper-core</artifactId>
+			<version>${com.googlecode.jmapper-framework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>${org.glassfish.javax.json-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>${com.opencsv-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>${net.sf.jasperreports-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-fonts</artifactId>
+			<version>${jasperreports-fonts-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>${org.codehaus.groovy-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId> <!-- use mapstruct-jdk8 for Java 8 or higher -->
+			<version>${org.mapstruct-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${org.mapstruct-version}</version>
+		</dependency>
+		<!-- Apache -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${org.apache.logging.log4j-version}</version>
+		</dependency>
+		<!-- 3rd Party Library -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${com.mchange.c3p0-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>mchange-commons-java</artifactId>
+			<version>${com.mchange.commons-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.core-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${com.jcraft.jsch-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${com.fasterxml.jackson.core-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson.core-version}</version>
+		</dependency>
+
+
+	</dependencies>
+		
+</project>
