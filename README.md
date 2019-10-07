@@ -35,7 +35,7 @@ File -> Import -> Maven -> Existing Maven project
 |Spring Boot Configuration | Class or Java property files  |
 |--------------------------|---|
 |The Service Class | [Notification Service](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/src/main/java/com/star/sud/service/impl/NotificationServiceImpl.java) |
-|SQL Sceipts File | [scripts.sql](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/src/main/resources/scripts.sql) |
+|SQL Scripts File | [scripts.sql](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/src/main/resources/scripts.sql) |
 
 
 ## Steps to test the application:
