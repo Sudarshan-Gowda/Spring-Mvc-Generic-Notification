@@ -1,4 +1,5 @@
-# Generic Configuration for Triggering Email Notification to the User by Using Spring MVC
+# Spring MVC Generic Notification 
+  Generic Configuration for Triggering Email Notification to the User by Using Spring MVC.
 
 ## Running This Application Locally
 
@@ -41,8 +42,8 @@ File -> Import -> Maven -> Existing Maven project
 
 1) Once the application is installed properly, Run the application by adding server or build and deploy to webapps directory in server
 2) Once the application deployed successfully means hit the [URL](http://localhost:8080/Spring-Mvc-Generic-Notification) .
-   [Image] (https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic1.png)
-3. Enter the details Name and valid user email id and hit the submit button to trigger the email as shown in [Image] (https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic2.png)
+   [Image](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic1.png)
+3. Enter the details Name and valid user email id and hit the submit button to trigger the email as shown in [Image](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic2.png)
 4. If the entered email is valid means email will be trigger to the user with the text/decription as mentioned in your schema.
 	
    
