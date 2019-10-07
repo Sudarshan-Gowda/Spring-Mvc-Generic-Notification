@@ -16,7 +16,7 @@ Our issue tracker is available here: https://github.com/Sudarshan-Gowda/Spring-M
 The following items should be installed in your system:
 * STS - 3.0 Plus
 * Server - Apache tomcat
-* Data Base - MySql
+* Data Base - MySql 5
 
 ### Steps:
 
