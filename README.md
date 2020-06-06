@@ -41,10 +41,18 @@ File -> Import -> Maven -> Existing Maven project
 ## Steps to test the application:
 
 1) Once the application is installed properly, Run the application by adding server or build and deploy to webapps directory in server
-2) Once the application deployed successfully means hit the URL from your browser. (http://localhost:8080/Spring-Mvc-Generic-Notification).For Reference [Click to View](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic1.png)
-3) Enter the details Name and valid user email id and hit the submit button to trigger the email as shown in Image [Click to View](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic2.png)
+
+2) Once the application deployed successfully means hit the URL from your browser. <br>
+(http://localhost:8080/Spring-Mvc-Generic-Notification).
+<img src="https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic1.png" width="100%"/>
+
+3) Enter the details Name and valid user email id and hit the submit button to trigger the email as shown in Image 
+<img src="https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/docs/pic2.png" width="100%"/>
+
 4) Create a schema called NOTIFICATION in MYSQL Database and execute the scripts which is under the repository location [click here](https://github.com/Sudarshan-Gowda/Spring-Mvc-Generic-Notification/blob/master/src/main/resources/scripts.sql).
-5) Since this application is developed by considering to support any of the configuration like gmail, outlook or Zoho etc. The Configuration is maintained under the table called T_NTFN_DEVICE and modify the configuration as per your requirement and your account credentials and make sure the less secure app is enabled in case google account and double security disable for Zoho respectively.   
+
+5) Since this application is developed by considering to support any of the configuration like gmail, outlook or Zoho etc. The Configuration is maintained under the table called T_NTFN_DEVICE and modify the configuration as per your requirement and your account credentials and make sure the less secure app is enabled in case google account and double security disable for Zoho respectively. 
+
 6) Then to test the application go to the landing page and and page will prompt with User name and Email to enter. If the entered email is valid means Email notification will be triggered to the user.
 	
    
