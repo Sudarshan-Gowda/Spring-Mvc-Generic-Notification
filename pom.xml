@@ -40,7 +40,7 @@
 
 		<!-- Hibernate -->
 		<org.hibernate-version>4.3.8.Final</org.hibernate-version>
-		<org.hibernate-validator>5.1.2.Final</org.hibernate-validator>
+		<org.hibernate-validator>5.3.5.Final</org.hibernate-validator>
 		<org.hibernate-core>4.3.8.Final</org.hibernate-core>
 
 		<!-- Spring Framework -->
